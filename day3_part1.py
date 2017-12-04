@@ -15,59 +15,6 @@ def find_odd_square(until):
     return i
 
 
-def fill_spiral(number):
-    # assuming some values 
-    grid = [[0] * 101 for _ in range(101)]
-    step = 1
-    grid[51][51] = 1
-    x = 51
-    y = 51
-    num = number
-    next_num = int()
-    keepGoing = True
-
-
-    sumneighbours = lambda grid, x, y: grid[x-1][y-1] + grid[x-1][y] + grid[x-1][y+1] + grid[x][y-1] + grid[x+1][y-1] + grid[x+1][y] + grid[x][y+1] + grid[x+1][y+1]
-
-    while keepGoing:
-
-        if not keepGoing: break
-        for i in range(2 * step - 1):
-            y -= 1
-            grid[x][y] = sumneighbours(grid, x, y)
-            if grid[x][y] > num:
-                next_num = grid[x][y]
-                return next_num
-
-        if not keepGoing: break
-        for i in range(2 * step - 1):
-            x -= 1
-            grid[x][y] = sumneighbours(grid, x, y)
-            if grid[x][y] > num:
-                next_num = grid[x][y]
-                return next_num
-
-        if not keepGoing: break
-        for i in range(2 * step - 1):
-            y += 1
-            grid[x][y] = sumneighbours(grid, x, y)
-            if grid[x][y] > num:
-                next_num = grid[x][y]
-                return next_num
-
-        if not keepGoing: break
-        for i in range(2 * step - 1):
-            x += 1
-            grid[x][y] = sumneighbours(grid, x, y)
-            if grid[x][y] > num:
-                next_num = grid[x][y]
-                return next_num
-
-        step += 1
-        x += 1
-    return next_num
-
-
 if __name__ == "__main__":
     number = int(sys.argv[1])
 
@@ -98,6 +45,4 @@ if __name__ == "__main__":
 
     print("Steps to be taken in Manhattan distance: {}".format(x_dist+y_dist))
 
-    next_num = fill_spiral(number)
-    print("Part 2: Next number after {}: {}".format(number, next_num))
 

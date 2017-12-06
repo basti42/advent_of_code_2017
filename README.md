@@ -8,5 +8,4 @@ I comment a lot in my code and write probably way more code, than is needed...
 + [Day 4](https://github.com/basti42/advent_of_code_2017/blob/master/day4/)
 + [Day 5](https://github.com/basti42/advent_of_code_2017/blob/master/day5/)
 + [Day 6](https://github.com/basti42/advent_of_code_2017/blob/master/day6/)
-
-...Redistribution blocks in a given set of memory banks
++ Day 7...

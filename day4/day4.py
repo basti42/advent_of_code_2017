@@ -35,7 +35,7 @@ def count_valid_no_anagrams(passphrases):
 
 if __name__ == "__main__":
 
-    with open("testing_inputs/passphrases.txt", "r") as inp:
+    with open("../testing_inputs/passphrases.txt", "r") as inp:
         f = inp.read()
         passphrases = [ row.split() for row in f.split("\n") if len(row)>0 ]
 

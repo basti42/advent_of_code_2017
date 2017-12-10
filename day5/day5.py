@@ -30,7 +30,7 @@ def hop_through_list(lst, part=1):
 
 if __name__ == "__main__":
 
-    filename = "testing_inputs/list.txt"
+    filename = "../testing_inputs/list.txt"
     with open(filename, "r") as inp:
         lst = inp.read()
     # need 2 lists, since i modify the elements in lst

@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+"""
+Advent of Code 2017 - DAY 13
+    Packet Scanners
+"""
 
 def calc_severity(layers):
     """
@@ -39,9 +43,6 @@ def wait_until(layers):
         # checking whether this time passed without being caught
         if not caught:
             break
-
-    return delay
-
 
     return delay
 

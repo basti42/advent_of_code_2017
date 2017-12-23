@@ -5,12 +5,11 @@ Advent of Code 2017 - DAY 23
     Coprocessor Conflagration
 """
 
-def count_multiplications(instructions, register, partb=False):
+def count_multiplications(instructions, register):
     """
     count how many times the mul command is being invoked
     """
     mul_num, pointer = 0, 0
-    if partb: register['a'] = 1
 
     while pointer<len(instructions):
 
@@ -39,11 +38,30 @@ def count_multiplications(instructions, register, partb=False):
             else:
                 pointer += 1
 
-    if not partb:
-        return mul_num
-    else:
-        return register['h']
+    return mul_num
 
+def isPrime(n):
+    """return true if n is a prime number, assuming isprime(n) == isprime(-n)"""
+    if n == 1: return False
+    isPrime = True
+    for i in range(2,n):
+        if n%i == 0:
+            isPrime = False
+            break
+    return isPrime
+
+
+def part2():
+    """
+    PseudoCode from Reddit Subthread
+    """
+    b = 81 * 100 - 100000
+    c = b - 17000
+    counter = 0
+
+    for candidate in range(c, b, 17):
+        if not isPrime(abs(candidate)): counter += 1
+    return counter
 
 if __name__ == "__main__":
 
@@ -57,3 +75,5 @@ if __name__ == "__main__":
     multimes = count_multiplications(lines[:], registers.copy())
     print("Number of times multiply was invoked: {}".format(multimes))
 
+    regh = part2()
+    print("Value of Register h: {}".format(regh))

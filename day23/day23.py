@@ -41,7 +41,7 @@ def count_multiplications(instructions, register):
     return mul_num
 
 def isPrime(n):
-    """return true if n is a prime number, assuming isprime(n) == isprime(-n)"""
+    """return true if n is a prime number, assuming isPrime(n) == isPrime(-n)"""
     if n == 1: return False
     isPrime = True
     for i in range(2,n):
@@ -59,7 +59,7 @@ def part2():
     c = b - 17000
     counter = 0
 
-    for candidate in range(c, b, 17):
+    for candidate in range(c, b+1, 17):
         if not isPrime(abs(candidate)): counter += 1
     return counter
 

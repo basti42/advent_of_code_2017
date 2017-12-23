@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
 
+"""
+Advent of Code 2017 - DAY 23
+    Coprocessor Conflagration
+"""
+
 def count_multiplications(instructions, register, partb=False):
     """
     count how many times the mul command is being invoked

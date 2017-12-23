@@ -43,12 +43,12 @@ def count_multiplications(instructions, register):
 def isPrime(n):
     """return true if n is a prime number, assuming isPrime(n) == isPrime(-n)"""
     if n == 1: return False
-    isPrime = True
+    is_prime = True
     for i in range(2,n):
         if n%i == 0:
-            isPrime = False
+            is_prime = False
             break
-    return isPrime
+    return is_prime
 
 
 def part2():

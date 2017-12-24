@@ -25,4 +25,5 @@ I comment a lot in my code and write probably way more code, than is needed...
 + [Day 21](https://github.com/basti42/advent_of_code_2017/blob/master/day21/) Fractal Art
 + [Day 22](https://github.com/basti42/advent_of_code_2017/blob/master/day22/) Sporifica Virus
 + [Day 23](https://github.com/basti42/advent_of_code_2017/blob/master/day23/) Coprocessor Conflagration
-+ Day 24..
++ [Day 24](https://github.com/basti42/advent_of_code_2017/blob/master/day24/) Electromagnetic Moat
++ Day 25..
